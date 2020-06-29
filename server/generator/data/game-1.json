@@ -1,0 +1,2514 @@
+{
+  "stars": [
+    {
+      "id": 1,
+      "name": "Sehi",
+      "naturalResource": 29,
+      "terraformedResource": 29,
+      "planets": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "x": 200,
+      "y": 400
+    },
+    {
+      "id": 2,
+      "name": "Tic",
+      "naturalResource": 21,
+      "terraformedResource": 21,
+      "planets": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "x": 133.99617793691885,
+      "y": 473.7868245221674
+    },
+    {
+      "id": 4,
+      "name": "Vefiq",
+      "naturalResource": 28,
+      "terraformedResource": 28,
+      "planets": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "x": 188.55472902118936,
+      "y": 506.3861164448707
+    },
+    {
+      "id": 6,
+      "name": "Naqac",
+      "naturalResource": 68,
+      "terraformedResource": 68,
+      "planets": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "x": 154.55839782120756,
+      "y": 504.55171347914086
+    },
+    {
+      "id": 8,
+      "name": "Socuj",
+      "naturalResource": 13,
+      "terraformedResource": 13,
+      "planets": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "x": 299.400487861125,
+      "y": 410.93357274500636
+    },
+    {
+      "id": 10,
+      "name": "Difu",
+      "naturalResource": 15,
+      "terraformedResource": 15,
+      "planets": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "x": 260.9721362897335,
+      "y": 301.3166751864016
+    },
+    {
+      "id": 12,
+      "name": "Qema",
+      "naturalResource": 60,
+      "terraformedResource": 60,
+      "planets": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "x": 131.3252495040369,
+      "y": 475.4173630161995
+    },
+    {
+      "id": 14,
+      "name": "Tapel",
+      "naturalResource": 70,
+      "terraformedResource": 70,
+      "planets": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "x": 131.1267007661816,
+      "y": 488.3202618465826
+    },
+    {
+      "id": 16,
+      "name": "Alshain",
+      "naturalResource": 60,
+      "terraformedResource": 60,
+      "planets": [
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64
+      ],
+      "x": 124.67042027074554,
+      "y": 473.146800461906
+    },
+    {
+      "id": 18,
+      "name": "Patej",
+      "naturalResource": 27,
+      "terraformedResource": 27,
+      "planets": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "x": 296.77115486887396,
+      "y": 379.1111612255634
+    },
+    {
+      "id": 20,
+      "name": "Albaldah",
+      "naturalResource": 43,
+      "terraformedResource": 43,
+      "planets": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77
+      ],
+      "x": 222.89469579491694,
+      "y": 305.74060840182443
+    },
+    {
+      "id": 22,
+      "name": "Mon",
+      "naturalResource": 10,
+      "terraformedResource": 10,
+      "planets": [
+        78,
+        79,
+        80,
+        81,
+        82,
+        83
+      ],
+      "x": 362.23789501361,
+      "y": 329.233726807519
+    },
+    {
+      "id": 24,
+      "name": "Pocap",
+      "naturalResource": 50,
+      "terraformedResource": 50,
+      "planets": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93
+      ],
+      "x": 308.7632873068363,
+      "y": 540.9061649971732
+    },
+    {
+      "id": 26,
+      "name": "Jujes",
+      "naturalResource": 14,
+      "terraformedResource": 14,
+      "planets": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "x": 86.48116610018833,
+      "y": 248.88919843364283
+    },
+    {
+      "id": 28,
+      "name": "Jipu",
+      "naturalResource": 48,
+      "terraformedResource": 48,
+      "planets": [
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "x": 207.0848124731771,
+      "y": 206.12941060537338
+    },
+    {
+      "id": 30,
+      "name": "Nahi",
+      "naturalResource": 64,
+      "terraformedResource": 64,
+      "planets": [
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "x": 44.056040456303634,
+      "y": 310.1029395261781
+    },
+    {
+      "id": 32,
+      "name": "Riqa",
+      "naturalResource": 31,
+      "terraformedResource": 31,
+      "planets": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "x": -377.7235357885992,
+      "y": 847.8800243323196
+    },
+    {
+      "id": 34,
+      "name": "Hufon",
+      "naturalResource": 26,
+      "terraformedResource": 26,
+      "planets": [
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "x": 669.8992118010199,
+      "y": -118.83979295036761
+    },
+    {
+      "id": 36,
+      "name": "Tipa",
+      "naturalResource": 46,
+      "terraformedResource": 46,
+      "planets": [
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "x": 920.4065934432381,
+      "y": 259.3929584853267
+    }
+  ],
+  "planets": [
+    {
+      "id": 0,
+      "name": "Ligutariq",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "name": "Pihacabo",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Cuca",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Dihomoru",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Cutosegi",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Ralagos",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "Tociluhe",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "name": "Cineju",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "Qimumopi",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "name": "Famahoj",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "name": "Qicopig",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "name": "Qiquhu",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "name": "Nomeg",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 13,
+      "name": "Qifijo",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 14,
+      "name": "Lubeduqeh",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "name": "Deje",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 16,
+      "name": "Lifanoteni",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 17,
+      "name": "Movane",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "name": "Reca",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 19,
+      "name": "Pabejar",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 20,
+      "name": "Behito",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 21,
+      "name": "Conom",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 22,
+      "name": "Mumico",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 23,
+      "name": "Sajudipuqa",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 24,
+      "name": "Lesicotogi",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 25,
+      "name": "Naji",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 26,
+      "name": "Judotu",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 27,
+      "name": "Putusasore",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 28,
+      "name": "Bovohemi",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 29,
+      "name": "Pibinif",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 30,
+      "name": "Gine",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 31,
+      "name": "Higeji",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 32,
+      "name": "Gubotiha",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 33,
+      "name": "Vutovij",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 34,
+      "name": "Dufinid",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 35,
+      "name": "Faromevogi",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 36,
+      "name": "Jesam",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 37,
+      "name": "Susu",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 38,
+      "name": "Roboseguq",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 39,
+      "name": "Latonuduj",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 40,
+      "name": "Comusejusi",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 41,
+      "name": "Bufetabuvo",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 42,
+      "name": "Sifufi",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 43,
+      "name": "Linulavaj",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 44,
+      "name": "Qisu",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 45,
+      "name": "Bucod",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 46,
+      "name": "Darif",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 47,
+      "name": "Hovah",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 48,
+      "name": "Catufus",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 49,
+      "name": "Jinuqagub",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 50,
+      "name": "Nubiname",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 51,
+      "name": "Taholile",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 52,
+      "name": "Demuput",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 53,
+      "name": "Nepala",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 54,
+      "name": "Peji",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 55,
+      "name": "Famahuj",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 56,
+      "name": "Pisijojomu",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 57,
+      "name": "Pirani",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 58,
+      "name": "Rubopa",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 59,
+      "name": "Sibapi",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 60,
+      "name": "Pemomi",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 61,
+      "name": "Voculadad",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 62,
+      "name": "Qidotano",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 63,
+      "name": "Piqivot",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 64,
+      "name": "Vosanudu",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 65,
+      "name": "Qicugi",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 66,
+      "name": "Dadesej",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 67,
+      "name": "Ragehoro",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 68,
+      "name": "Letof",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 69,
+      "name": "Jeroliru",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 70,
+      "name": "Qusav",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 71,
+      "name": "Dohines",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 72,
+      "name": "Dicifah",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 73,
+      "name": "Labejura",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 74,
+      "name": "Mope",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 75,
+      "name": "Befi",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 76,
+      "name": "Vabami",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 77,
+      "name": "Qasuluse",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 78,
+      "name": "Nasu",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 79,
+      "name": "Badugesuh",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 80,
+      "name": "Vofoqug",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 81,
+      "name": "Vibaqaquvi",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 82,
+      "name": "Dutuga",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 83,
+      "name": "Qedip",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 84,
+      "name": "Ravi",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 85,
+      "name": "Gimamiset",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 86,
+      "name": "Duse",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 87,
+      "name": "Jubovanet",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 88,
+      "name": "Maciva",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 89,
+      "name": "Depiqi",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 90,
+      "name": "Deruveved",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 91,
+      "name": "Tuqoras",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 92,
+      "name": "Sarejel",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 93,
+      "name": "Suhec",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 94,
+      "name": "Ripomi",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 95,
+      "name": "Foriha",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 96,
+      "name": "Bofehafol",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 97,
+      "name": "Bunenoj",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 98,
+      "name": "Hoceh",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 99,
+      "name": "Titufi",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 100,
+      "name": "Morete",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 101,
+      "name": "Moqutej",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 102,
+      "name": "Mufeh",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 103,
+      "name": "Qicivoqij",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 104,
+      "name": "Qebef",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 105,
+      "name": "Vetahese",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 106,
+      "name": "Hibu",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 107,
+      "name": "Jeluduf",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 108,
+      "name": "Qaru",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 109,
+      "name": "Huvesebore",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 110,
+      "name": "Qejodu",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 111,
+      "name": "Bocem",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 112,
+      "name": "Rovofopu",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 113,
+      "name": "Biqe",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 114,
+      "name": "Nobu",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 115,
+      "name": "Retineb",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 116,
+      "name": "Sonimenul",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Uranium",
+          "value": 0.5,
+          "type": "radioactive"
+        }
+      }
+    },
+    {
+      "id": 117,
+      "name": "Mehibuhu",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 118,
+      "name": "Vapabo",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 119,
+      "name": "Folegaqocu",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 120,
+      "name": "Tipibic",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 121,
+      "name": "Madet",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 122,
+      "name": "Cesidide",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 123,
+      "name": "Pepa",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 124,
+      "name": "Lalacuba",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 125,
+      "name": "Guse",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 126,
+      "name": "Fenaveqid",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 127,
+      "name": "Gemita",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 128,
+      "name": "Tonimiqar",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 129,
+      "name": "Babuhime",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 130,
+      "name": "Qeme",
+      "mining": {
+        "economy": {
+          "mineral": "Gold",
+          "value": 0.5,
+          "type": "metal"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 131,
+      "name": "Bobefupefe",
+      "mining": {
+        "economy": {
+          "mineral": "Opal",
+          "value": 0.5,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Platinum",
+          "value": 0.4,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 132,
+      "name": "Bipasuqe",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Tantalum",
+          "value": 0.3,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 133,
+      "name": "Napigaqoji",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 134,
+      "name": "Lisaruhi",
+      "mining": {
+        "economy": {
+          "mineral": "Sapphire",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Copper",
+          "value": 0.1,
+          "type": "metal"
+        }
+      }
+    },
+    {
+      "id": 135,
+      "name": "Ruti",
+      "mining": {
+        "economy": {
+          "mineral": "Diamond",
+          "value": 0.4,
+          "type": "gem"
+        },
+        "manufacturing": {
+          "mineral": "Titanium",
+          "value": 0.5,
+          "type": "metal"
+        }
+      }
+    }
+  ],
+  "players": [
+    {
+      "id": 0,
+      "color": 13435085
+    }
+  ]
+}

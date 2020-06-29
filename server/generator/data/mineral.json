@@ -1,0 +1,60 @@
+{
+  "manufacturing": [
+    {
+      "name": "Titanium",
+      "type": "metal",
+      "description": "",
+      "value": "0.5"
+    },
+    {
+        "name": "Uranium",
+        "type": "radioactive",
+        "description": "",
+        "value": "0.5"
+      },
+      {
+        "name": "Copper",
+        "type": "metal",
+        "description": "",
+        "value": "0.1"
+      },
+      {
+        "name": "Platinum",
+        "type": "metal",
+        "description": "",
+        "value": "0.4"
+      },
+      {
+        "name": "Tantalum",
+        "type": "metal",
+        "description": "",
+        "value": "0.3"
+      }
+  ],
+  "economy":[
+    {
+        "name": "Gold",
+        "type": "metal",
+        "description": "",
+        "value": "0.5"
+      },
+      {
+        "name": "Diamond",
+        "type": "gem",
+        "description": "",
+        "value": "0.4"
+      },
+      {
+        "name": "Opal",
+        "type": "gem",
+        "description": "",
+        "value": "0.5"
+      },
+      {
+        "name": "Sapphire",
+        "type": "gem",
+        "description": "",
+        "value": "0.4"
+      }
+  ]
+}
