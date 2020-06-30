@@ -1,4 +1,5 @@
 import * as Phaser from 'phaser';
+import { StarDetailsView } from './star-view/star-details-view';
 export class Star {
   private data: any;
   private gameData: any;
@@ -38,13 +39,7 @@ export class Star {
 
     var circle = scene.add.circle(x, y, 10, 0xffffff);
     let color = 0x5d6d7e;
-    // const random = Math.floor(Math.random() * (3 - 0 + 1) + 0);
-    // if (random == 0) {
-    //   // color = 0xffbe0e;
-    // } else if (random == 1) {
-    //   // color = 0x0433ff;
-    // }
-    // if (this.data.color) color = this.data.color;
+
     if (this.data.puid !== undefined) {
       const player = this.gameData.players[Number(this.data.puid)];
       color = Number(player.color);
@@ -52,7 +47,7 @@ export class Star {
     }
     this.color = color;
     var ring = scene.add.circle(x, y, 12.5, this.color, 0);
-    ring.setStrokeStyle(5, this.color, 1);
+    ring.setStrokeStyle(3, this.color, 1);
 
     circle.setDisplaySize(10, 10);
     ring.setDisplaySize(this.size, this.size);
@@ -63,7 +58,7 @@ export class Star {
       'div',
       `
     color:#fff;
-    font-size:12px;
+    font-size:10px;
     font-family:'Arial';
     text-shadow: 1px 1px #000000;
     `,
@@ -105,36 +100,6 @@ export class Star {
   }
   private openStarDetails = () => {
     if (!this.scene || !this.container || this.detailsObject) return;
-    this.detailsObject = this.scene.add.dom(
-      0,
-      0,
-      'div',
-      `
-    color:#fff;
-    font-size:2rem;
-    font-family:'Arial';
-    background-color:rgba(19, 10, 44, 0.9);
-    width:${
-      Number(this.scene.game.config.width) -
-      Number(this.scene.game.config.width) * 0.1
-    }px;
-    height:${
-      Number(this.scene.game.config.height) -
-      Number(this.scene.game.config.width) * 0.1
-    }px;
-    left:calc(50% - ${Number(this.scene.game.config.width) * 0.05}px);
-    top:calc(50% - ${Number(this.scene.game.config.width) * 0.05}px);
-    padding:1rem;
-    margin:1rem;
-    border: 2px solid #fff;
-    `,
-      `
-     
-      `,
-    );
-    this.detailsObject.setHTML(`
-    <span class="detail-title">${this.data.name}</span>
-    `);
   };
   public getColor() {
     return this.color;
@@ -155,7 +120,8 @@ export class Star {
       this.clickTimer = setTimeout(this.clearTimeout, 500);
     } else if (this.clickTimer) {
       this.clearTimeout();
-      // this.openStarDetails();
+      // if (this.scene) this.scene.scene.start('planet-view');
+      StarDetailsView.open(this.data);
       return;
     }
     // //level 2 range upto 80px

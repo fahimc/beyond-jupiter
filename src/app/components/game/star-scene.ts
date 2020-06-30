@@ -2,6 +2,7 @@ import * as Phaser from 'phaser';
 import * as data from './game.json';
 import * as Hammer from 'hammerjs';
 import { Star } from './component/star';
+import { StarDetailsView } from './component/star-view/star-details-view';
 export class StarScene extends Phaser.Scene {
   private container: Phaser.GameObjects.Container | undefined = undefined;
   private loadingObject: Phaser.GameObjects.DOMElement | undefined = undefined;
@@ -12,18 +13,19 @@ export class StarScene extends Phaser.Scene {
     super({ key: 'stars-view' });
   }
   public preload() {
+    this.cameras.main.setBackgroundColor('#1d1d1d');
     this.loadingObject = this.add.dom(
       0,
       100,
       'div',
-      `color:#fff;left:50%;font-size:2rem;top:${
+      `color:#fff;left:50%;font-size:1.5rem;top:${
         Number(this.game.config.height) / 3
       }px;`,
-      'Loading',
+      'LOADING',
     );
     this.load.image('star', 'star.png');
     this.load.image('unoccupied-star', 'unoccupied-star.png');
-    this.load.image('bg1', 'bg1.png');
+    this.load.image('bg1', 'bg2.png');
 
     this.load.scenePlugin(
       'rexgesturesplugin',
@@ -34,6 +36,7 @@ export class StarScene extends Phaser.Scene {
   }
   public create() {
     if (this.loadingObject) this.loadingObject.destroy();
+
     const rect = {
       width: Number(this.game.config.width),
       height: Number(this.game.config.height),
@@ -79,7 +82,8 @@ export class StarScene extends Phaser.Scene {
     let isDragging = false;
     let startX = 0;
     let startY = 0;
-    document.addEventListener('touchstart', event => {
+    const canvas = document.querySelector('canvas');
+    canvas?.addEventListener('touchstart', event => {
       isDragging = true;
       if (event.touches && this.container) {
         startX = event.touches[0].clientX;
@@ -87,7 +91,7 @@ export class StarScene extends Phaser.Scene {
       }
     });
 
-    document.addEventListener('touchmove', event => {
+    canvas?.addEventListener('touchmove', event => {
       if (isDragging) {
         if (event.touches && this.container) {
           const diff =
@@ -109,25 +113,36 @@ export class StarScene extends Phaser.Scene {
         }
       }
     });
-    document.addEventListener('touchend', event => {
+    canvas?.addEventListener('touchend', event => {
       isDragging = false;
     });
+    this.input.on('wheel', (pointer, gameObjects, deltaX, deltaY, deltaZ) => {
+      if (deltaY < 0) {
+        this.zoomIn();
+      } else {
+        this.zoomOut();
+      }
+    });
     mc.on('pinchin', event => {
-      if (!this.container) return;
-      let scale = this.container.scale;
-      if (scale >= 0.5) scale -= 0.03;
-      this.container.setScale(scale, scale);
-
-      // this.container.setX(0);
-      // this.container.setY(0);
+      this.zoomOut();
     });
     mc.on('pinchout', event => {
-      if (!this.container) return;
-      let scale = this.container.scale;
-      if (scale <= 2) scale += 0.03;
-      this.container.setScale(scale, scale);
+      this.zoomIn();
     });
     this.createUI();
+  }
+  private zoomIn() {
+    if (!this.container) return;
+    let scale = this.container.scale;
+    if (scale <= 2) scale += 0.03;
+    this.container.setScale(scale, scale);
+  }
+
+  private zoomOut() {
+    if (!this.container) return;
+    let scale = this.container.scale;
+    if (scale >= 0.5) scale -= 0.03;
+    this.container.setScale(scale, scale);
   }
 
   private createUI() {
@@ -145,10 +160,12 @@ export class StarScene extends Phaser.Scene {
     );
     prodBar.setHTML(`
     <div class="prod-bar">
-    <span class="credits">800</span>
-    <span>8h 23m 12s</span>
+    <span class="credits"><i class="icon green flaticon-finances"></i>800</span>
+    <span class="time"><i class="icon red flaticon-clock"></i>8H 23M 12S</span>
   </div>
     `);
+
+    StarDetailsView.create(this);
   }
   // private createStars() {
   //   const starList: any[] = [];

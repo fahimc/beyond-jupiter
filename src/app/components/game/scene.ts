@@ -8,14 +8,15 @@ export class Scene extends Phaser.Scene {
     super({ key: 'intro' });
   }
   public preload() {
+    this.cameras.main.setBackgroundColor('#1d1d1d');
     this.loadingObject = this.add.dom(
       0,
       100,
       'div',
-      `color:#fff;left:50%;font-size:2rem;top:${
+      `color:#fff;left:50%;font-size:1.5rem;top:${
         Number(this.game.config.height) / 3
       }px;`,
-      'Loading',
+      'LOADING',
     );
     this.load.image('logo', 'logo-1.png');
     this.load.image('jupiter', 'world-edited.png');
@@ -81,31 +82,23 @@ export class Scene extends Phaser.Scene {
       repeat: -1, // -1: infinity
       yoyo: false,
     });
-    // jupiter.tint = 0xffa500;
-    // jupiter.setBlendMode(Phaser.BlendModes.COLOR);
+
+    let buttonElement = document.createElement('button');
+    buttonElement.className = 'start-button';
+    buttonElement.innerText = 'new game';
     this.button = this.add.dom(
       rect.width / 2,
       rect.height * 0.8,
-      'button',
-      `width:250px;
-      border: 2px solid white;
-      background: rgba(19,10,44,0.9);
-      color:white;
-      padding: 10px;
-      font-size: 1.1rem;`,
-      'create new game',
+      buttonElement,
     );
-    // .createFromHTML(`
-    // <button class="play-button">play</button>
-    // `);
-    this.button.setInteractive().on('pointerdown', this.onPlayClick.bind(this));
+
+    buttonElement.addEventListener('click', this.onPlayClick.bind(this));
   }
-  private onPlayClick() {
+  private onPlayClick(event) {
     const rect = {
       width: Number(this.game.config.width),
       height: Number(this.game.config.height),
     };
-    this.button?.destroy();
     const loading = this.add.image(
       rect.width / 2,
       rect.height * 0.7,

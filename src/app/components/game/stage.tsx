@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as Phaser from 'phaser';
 import { Scene } from './scene';
 import { StarScene } from './star-scene';
+import { PlanetView } from './component/scene/planet-view';
 export interface StageProps {}
 export class Stage extends React.Component<StageProps> {
   private game: Phaser.Game | undefined;
@@ -36,8 +37,8 @@ export class Stage extends React.Component<StageProps> {
         },
       },
 
-      // scene: [Scene, StarScene],
-      scene: [StarScene],
+      scene: [Scene, StarScene],
+      // scene: [StarScene],
     };
   }
 }
