@@ -1,5 +1,6 @@
 import * as Phaser from 'phaser';
 import { StarDetailsView } from './star-view/star-details-view';
+import { Fleet } from './fleet/fleet';
 export class Star {
   private data: any;
   private gameData: any;
@@ -68,6 +69,11 @@ export class Star {
     text.setX(x);
     circle.setInteractive().on('pointerup', this.onClick.bind(this));
     ring.setInteractive().on('pointerup', this.onClick.bind(this));
+
+    circle
+      .setInteractive()
+      .on('pointerdownoutside', this.onClickOut.bind(this));
+    ring.setInteractive().on('pointerdownoutside', this.onClickOut.bind(this));
     // text.setInteractive().on('pointerup', this.onClick.bind(this));
 
     scene.input.on('gameobjectout', this.onClickOut.bind(this));
@@ -77,10 +83,10 @@ export class Star {
     this.circleObject = circle;
     this.ringObject = ring;
     this.textObject = text;
-
-    return [circle, ring, text];
+    if (this.container) this.container.add([circle, ring, text]);
   }
   private onOut() {
+    this.clearTimeout();
     if (this.radiusObject && this.radiusObjectRange) {
       this.radiusObject.destroy();
       this.radiusObjectRange.destroy();
@@ -97,6 +103,10 @@ export class Star {
       this.radiusObject.destroy();
       this.radiusObjectRange.destroy();
     }
+  }
+  private createFleet() {
+    const fleet = new Fleet();
+    fleet.create(this.scene, this.container, this.circleObject, this.color);
   }
   private openStarDetails = () => {
     if (!this.scene || !this.container || this.detailsObject) return;
@@ -121,7 +131,7 @@ export class Star {
     } else if (this.clickTimer) {
       this.clearTimeout();
       // if (this.scene) this.scene.scene.start('planet-view');
-      StarDetailsView.open(this.data);
+      StarDetailsView.open(this.data, this);
       return;
     }
     // //level 2 range upto 80px

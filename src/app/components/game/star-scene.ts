@@ -3,6 +3,7 @@ import * as data from './game.json';
 import * as Hammer from 'hammerjs';
 import { Star } from './component/star';
 import { StarDetailsView } from './component/star-view/star-details-view';
+import { LoadingView } from './component/loading/loading';
 export class StarScene extends Phaser.Scene {
   private container: Phaser.GameObjects.Container | undefined = undefined;
   private loadingObject: Phaser.GameObjects.DOMElement | undefined = undefined;
@@ -14,18 +15,11 @@ export class StarScene extends Phaser.Scene {
   }
   public preload() {
     this.cameras.main.setBackgroundColor('#1d1d1d');
-    this.loadingObject = this.add.dom(
-      0,
-      100,
-      'div',
-      `color:#fff;left:50%;font-size:1.5rem;top:${
-        Number(this.game.config.height) / 3
-      }px;`,
-      'LOADING',
-    );
+    LoadingView.create(this);
     this.load.image('star', 'star.png');
     this.load.image('unoccupied-star', 'unoccupied-star.png');
     this.load.image('bg1', 'bg2.png');
+    this.load.image('star-details', 'images/star-details.jpg');
 
     this.load.scenePlugin(
       'rexgesturesplugin',
@@ -35,7 +29,7 @@ export class StarScene extends Phaser.Scene {
     );
   }
   public create() {
-    if (this.loadingObject) this.loadingObject.destroy();
+    LoadingView.destroy();
 
     const rect = {
       width: Number(this.game.config.width),
@@ -438,7 +432,6 @@ export class StarScene extends Phaser.Scene {
         starData.name,
       );
       this.stars.push(star);
-      if (this.container) this.container.add(gameObjects);
     }
   }
 }

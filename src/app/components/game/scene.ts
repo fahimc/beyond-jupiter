@@ -1,33 +1,27 @@
 import * as Phaser from 'phaser';
+import { LoadingView } from './component/loading/loading';
 
 export class Scene extends Phaser.Scene {
   private music: any = null;
   private button: Phaser.GameObjects.DOMElement | undefined = undefined;
   private loadingObject: Phaser.GameObjects.DOMElement | undefined = undefined;
+  private buttonElement: HTMLElement | undefined = undefined;
   constructor() {
     super({ key: 'intro' });
   }
   public preload() {
     this.cameras.main.setBackgroundColor('#1d1d1d');
-    this.loadingObject = this.add.dom(
-      0,
-      100,
-      'div',
-      `color:#fff;left:50%;font-size:1.5rem;top:${
-        Number(this.game.config.height) / 3
-      }px;`,
-      'LOADING',
-    );
+    LoadingView.create(this);
     this.load.image('logo', 'logo-1.png');
     this.load.image('jupiter', 'world-edited.png');
     this.load.image('star', 'star.png');
     this.load.image('bg', 'bg.png');
     this.load.image('play-button', 'play-button.png');
     this.load.image('loading', 'loading.png');
-    this.load.audio('intro-music', 'sounds/discovery.ogg');
+    this.load.audio('intro-music', 'sounds/discovery3.ogg');
   }
   public create() {
-    if (this.loadingObject) this.loadingObject.destroy();
+    LoadingView.destroy();
     this.music = this.sound.add('intro-music', {
       mute: false,
       volume: 1,
@@ -37,7 +31,8 @@ export class Scene extends Phaser.Scene {
       loop: true,
       delay: 0,
     });
-    //this.music.play();
+    this.music.setLoop(true);
+    // this.music.play();
     const rect = {
       width: Number(this.game.config.width),
       height: Number(this.game.config.height),
@@ -83,18 +78,19 @@ export class Scene extends Phaser.Scene {
       yoyo: false,
     });
 
-    let buttonElement = document.createElement('button');
-    buttonElement.className = 'start-button';
-    buttonElement.innerText = 'new game';
+    this.buttonElement = document.createElement('button');
+    this.buttonElement.className = 'start-button';
+    this.buttonElement.innerText = 'new game';
     this.button = this.add.dom(
       rect.width / 2,
       rect.height * 0.8,
-      buttonElement,
+      this.buttonElement,
     );
 
-    buttonElement.addEventListener('click', this.onPlayClick.bind(this));
+    this.buttonElement.addEventListener('click', this.onPlayClick.bind(this));
   }
   private onPlayClick(event) {
+    if (this.buttonElement) this.buttonElement.style.pointerEvents = 'none';
     const rect = {
       width: Number(this.game.config.width),
       height: Number(this.game.config.height),
@@ -104,7 +100,6 @@ export class Scene extends Phaser.Scene {
       rect.height * 0.7,
       'loading',
     );
-    this.music.stop();
     this.scene.start('stars-view');
   }
 }

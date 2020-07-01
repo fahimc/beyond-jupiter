@@ -7,10 +7,14 @@ export const LoadingView = {
       0,
       100,
       'div',
-      `color:#fff;left:50%;font-size:1.5rem;top:${
+      `color:var(--lightblue-color);left:50%;font-size:1rem;top:${
         Number(scene.game.config.height) / 3
-      }px;`,
-      'LOADING',
+      }px;
+      text-align: center;`,
+      '',
+    );
+    this.loadingObject.setHTML(
+      '<div class="lds-ripple"><div></div><div></div></div><span style="display:block;margin-top: -10px;">LOADING</span>',
     );
   },
   destroy() {
