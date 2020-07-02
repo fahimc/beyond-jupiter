@@ -36,26 +36,11 @@ openSansObserver.load().then(() => {
   document.body.classList.add('fontLoaded');
 });
 
-const store = configureAppStore();
+
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;
 
-interface Props {
-  Component: typeof App;
-}
-const ConnectedApp = ({ Component }: Props) => (
-  <Provider store={store}>
-    <ThemeProvider>
-      <HelmetProvider>
-        <React.StrictMode>
-          <Component />
-        </React.StrictMode>
-      </HelmetProvider>
-    </ThemeProvider>
-  </Provider>
-);
-
-const render = (Component: typeof App) => {
-  ReactDOM.render(<ConnectedApp Component={Component} />, MOUNT_NODE);
+const render = () => {
+  ReactDOM.render(<App />, MOUNT_NODE);
 };
 
 if (module.hot) {
@@ -64,12 +49,11 @@ if (module.hot) {
   // have to be constants at compile-time
   module.hot.accept(['./app', './locales/i18n'], () => {
     ReactDOM.unmountComponentAtNode(MOUNT_NODE);
-    const App = require('./app').App;
-    render(App);
+    render();
   });
 }
 
-render(App);
+render();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

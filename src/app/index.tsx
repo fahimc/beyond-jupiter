@@ -14,16 +14,13 @@ import { GlobalStyle } from '../styles/global-styles';
 
 import { Stage } from './components/game/stage';
 import { RootStore } from './redux/store';
+import { DataService } from './service/data-service';
 export const store = new RootStore().getStore();
 export function App() {
+
+  DataService.getData();
   return (
     <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
-      >
-        <meta name="description" content="A React Boilerplate application" />
-      </Helmet>
 
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={Stage} />

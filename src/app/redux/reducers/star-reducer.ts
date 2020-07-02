@@ -1,12 +1,12 @@
 import { StarActionTypes, StarKeys } from '../actions/star-actions';
 export interface StarItem {
-  id: string;
+  id: number;
   playerId: string;
-  fleets: string[];
+  fleetsOrbiting: string[];
   name: string;
-  naturalResource: string;
-  terraformedResource: string;
-  planets: string[];
+  naturalResource: number;
+  terraformedResource: number;
+  planets: number[];
   x: number;
   y: number;
 }
