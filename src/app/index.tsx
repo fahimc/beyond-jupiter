@@ -12,11 +12,9 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import { GlobalStyle } from '../styles/global-styles';
 
-import { HomePage } from './containers/HomePage/Loadable';
-import { NotFoundPage } from './containers/NotFoundPage/Loadable';
-import { Game } from './components/game/game';
 import { Stage } from './components/game/stage';
-
+import { RootStore } from './redux/store';
+export const store = new RootStore().getStore();
 export function App() {
   return (
     <BrowserRouter>
@@ -29,7 +27,6 @@ export function App() {
 
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={Stage} />
-        <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
     </BrowserRouter>

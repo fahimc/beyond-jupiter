@@ -12,7 +12,7 @@ export class Scene extends Phaser.Scene {
   public preload() {
     this.cameras.main.setBackgroundColor('#1d1d1d');
     LoadingView.create(this);
-    this.load.image('logo', 'logo-1.png');
+    this.load.image('logo', 'images/logo.svg');
     this.load.image('jupiter', 'world-edited.png');
     this.load.image('star', 'star.png');
     this.load.image('bg', 'bg.png');
@@ -32,7 +32,7 @@ export class Scene extends Phaser.Scene {
       delay: 0,
     });
     this.music.setLoop(true);
-    // this.music.play();
+    this.music.play();
     const rect = {
       width: Number(this.game.config.width),
       height: Number(this.game.config.height),
@@ -101,5 +101,6 @@ export class Scene extends Phaser.Scene {
       'loading',
     );
     this.scene.start('stars-view');
+    this.music.setVolume(0.5);
   }
 }

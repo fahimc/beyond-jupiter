@@ -4,6 +4,7 @@ import * as Hammer from 'hammerjs';
 import { Star } from './component/star';
 import { StarDetailsView } from './component/star-view/star-details-view';
 import { LoadingView } from './component/loading/loading';
+import { ProdCountdown } from './component/prod-countdown/prod-countdown';
 export class StarScene extends Phaser.Scene {
   private container: Phaser.GameObjects.Container | undefined = undefined;
   private loadingObject: Phaser.GameObjects.DOMElement | undefined = undefined;
@@ -155,10 +156,10 @@ export class StarScene extends Phaser.Scene {
     prodBar.setHTML(`
     <div class="prod-bar">
     <span class="credits"><i class="icon green flaticon-finances"></i>800</span>
-    <span class="time"><i class="icon red flaticon-clock"></i>8H 23M 12S</span>
+    <span class="time"><i class="icon red flaticon-clock"></i><span id="prod-timer">0H 0M 0S</span></span>
   </div>
     `);
-
+    ProdCountdown.create();
     StarDetailsView.create(this);
   }
   // private createStars() {
