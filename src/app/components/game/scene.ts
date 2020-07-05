@@ -1,13 +1,32 @@
 import * as Phaser from 'phaser';
 import { LoadingView } from './component/loading/loading';
+import { store } from 'app';
+import { Unsubscribe } from 'redux-saga';
 
 export class Scene extends Phaser.Scene {
   private music: any = null;
   private button: Phaser.GameObjects.DOMElement | undefined = undefined;
   private loadingObject: Phaser.GameObjects.DOMElement | undefined = undefined;
   private buttonElement: HTMLElement | undefined = undefined;
+  private ready: boolean = false;
+  private createReady: boolean = false;
+  private storeUnsubscription: Unsubscribe | undefined;
   constructor() {
     super({ key: 'intro' });
+    this.subscribe();
+  }
+  private subscribe() {
+    this.ready = store.getState().system.ready;
+    this.storeUnsubscription = store.subscribe(() => {
+      const state = store.getState();
+      if (state.system.ready) {
+        this.ready = state.system.ready;
+        if (this.createReady) this.create();
+      }
+    });
+  }
+  public destroy() {
+    if (this.storeUnsubscription) this.storeUnsubscription();
   }
   public preload() {
     this.cameras.main.setBackgroundColor('#1d1d1d');
@@ -21,6 +40,10 @@ export class Scene extends Phaser.Scene {
     this.load.audio('intro-music', 'sounds/discovery3.ogg');
   }
   public create() {
+    if (!this.ready) {
+      this.createReady = true;
+      return;
+    }
     LoadingView.destroy();
     this.music = this.sound.add('intro-music', {
       mute: false,
@@ -32,7 +55,7 @@ export class Scene extends Phaser.Scene {
       delay: 0,
     });
     this.music.setLoop(true);
-    this.music.play();
+    // this.music.play();
     const rect = {
       width: Number(this.game.config.width),
       height: Number(this.game.config.height),

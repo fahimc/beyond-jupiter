@@ -1,0 +1,3 @@
+export enum Events {
+  SHOW_ORBITING_FLEETS = 'SHOW_ORBITING_FLEETS',
+}

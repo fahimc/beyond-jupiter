@@ -15,6 +15,8 @@ const GenerateUniverse = {
   planetNames: [...planetNames],
   planets: [],
   players: [],
+  playerId: 0,
+  homeId: 0,
   starIndex: 0,
   numberOfPlayers: 10,
   stars: [],
@@ -23,17 +25,19 @@ const GenerateUniverse = {
   x: 200,
   y: 400,
   init() {
-    this.createStarsFromCenter();
+    this.playerId = this.createStarsFromCenter();
     this.save();
   },
   save() {
     fs.writeFileSync(
-      path.resolve(__dirname, '../../src/app/components/game/game.json'),
+      path.resolve(__dirname, '../../src/app/service/game.json'),
       JSON.stringify(
         {
           stars: this.stars,
           planets: this.planets,
           players: this.players,
+          playerId: this.playerId,
+          playerCash: 500,
         },
         null,
         2,
@@ -69,25 +73,67 @@ const GenerateUniverse = {
     const numberOfPlayers = 8;
     const angleIncrement = 360 / numberOfPlayers;
     const colors = [
-      0xf1c40f,
-      0x1abc9c,
-      0xd35400,
-      0x2980b9,
-      0x27ae60,
-      0xe74c3c,
-      0x52be80,
-      0xcd00cd,
+      '#f1c40f',
+      '#1abc9c',
+      '#d35400',
+      '#2980b9',
+      '#27ae60',
+      '#e74c3c',
+      '#52be80',
+      '#cd00cd',
+      '#8503ff',
     ];
+    colors.sort(() => {
+      return 0.5 - Math.random();
+    });
     let addInbetween = 0;
     let homeStarIndex = 8;
     let currentAngle = angleIncrement;
+    const defaultLevel = 2;
+    const currentPlayerId = Math.round(
+      Math.random() * (numberOfPlayers - 0 + 1) + 0,
+    );
+
     for (let a = 0; a < numberOfPlayers; a++) {
       const puid = a;
-      const colorIndex = Math.round(
-        Math.random() * (Number(colors.length - 1) - 0 + 1) + 0,
-      );
+      const colorIndex = colors.length - 1;
       this.players.push({
         id: puid,
+        alias: 'Player ' + a,
+        tech: {
+          scanning: {
+            level: defaultLevel,
+            research: 0,
+          },
+          manufacturing: {
+            level: defaultLevel,
+            research: 0,
+          },
+          science: {
+            level: defaultLevel,
+            research: 0,
+          },
+          range: {
+            level: defaultLevel,
+            research: 0,
+          },
+          terraforming: {
+            level: defaultLevel,
+            research: 0,
+          },
+          experimentation: {
+            level: defaultLevel,
+            research: 0,
+          },
+          weapons: {
+            level: defaultLevel,
+            research: 0,
+          },
+          banking: {
+            level: defaultLevel,
+            research: 0,
+          },
+        },
         color: colors[colorIndex],
       });
       const playerStars = [];
@@ -141,7 +187,9 @@ const GenerateUniverse = {
         });
       }
 
-      colors.splice(colorIndex, 1);
+      if (currentPlayerId == a) this.homeId = inRange[0].id;
+
+      colors.pop();
       currentAngle += angleIncrement;
       if (addInbetween) {
         addInbetween = 0;
@@ -151,6 +199,11 @@ const GenerateUniverse = {
       }
       addInbetween++;
     }
+
+    const player = this.players.find(p => p.id == currentPlayerId);
+    player.homeId = this.homeId;
+
+    return currentPlayerId;
 
     // //level 2 range upto 80px
 

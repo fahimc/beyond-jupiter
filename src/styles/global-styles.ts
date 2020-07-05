@@ -271,4 +271,61 @@ loading
   }
 }
 /* end loading */
+.fleet-icon-container{
+  pointer-events:none !important;
+}
+#fleet-icon-holder {
+    overflow: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 180px;
+    justify-content: flex-end;
+}
+.fleet-button{
+  height:60px;
+  width:60px;
+  border-radius:50%;
+  text-align:center;
+  border: 1px solid var(--lightblue-color);
+  background:rgba(27, 35, 37,0.7);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.fleet-button img {
+  height: 80%;
+  margin-top: 10%;
+}
+.fleet-button-holder {
+  display:flex;
+  align-items: center;
+  width: 100%;
+}
+.fleet-button-holder .fleet-name {
+  color:var(--lightblue-color);
+  margin-right: 10px;
+  font-weight: bold;
+  text-shadow: 0 0 15px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1);
+  margin-left: 10px;
+    flex: 1;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fleet-icon-wrapper{
+  height:300px;
+  width:100%;
+  overflow: auto;
+  overflow-x:hidden;
+  overflow-y:auto;
+  pointer-events:all;
+  border: 1px solid var(--lightblue-color);
+  background: rgba(27,35,37,0.7);
+  border-radius: 10px;
+  padding-top: 20px;
+    padding-bottom: 20px;
+}
+.hide {
+  display:none !important;
+}
 `;

@@ -1,8 +1,23 @@
 import * as Phaser from 'phaser';
+import { store } from 'app';
+import { Unsubscribe } from '@reduxjs/toolkit';
+import { addFleetToStar } from 'app/redux/actions/star-actions';
+import { StarItem } from 'app/redux/reducers/star-reducer';
+import { DataService } from 'app/service/data-service';
 export const StarDetailsView = {
   view: (null as unknown) as HTMLElement,
   viewObject: (null as unknown) as Phaser.GameObjects.DOMElement,
   currentStar: null as any,
+  currentStarData: (null as unknown) as StarItem,
+  storeUnsubscription: (null as unknown) as Unsubscribe,
+  init() {
+    this.subscribe();
+  },
+  subscribe() {
+    this.storeUnsubscription = store.subscribe(() => {
+      const state = store.getState();
+    });
+  },
   create(scene: Phaser.Scene) {
     const rect = {
       width: Number(scene.game.config.width),
@@ -46,18 +61,28 @@ export const StarDetailsView = {
       ?.addEventListener('click', this.onClose.bind(this));
   },
   onBuyFleet() {
-    this.currentStar.createFleet();
+    DataService.addFleetToStar(this.currentStarData.id, 0);
   },
   onClose() {
     this.viewObject.setVisible(false);
   },
   open(starData: any, star: any) {
     this.currentStar = star;
+    this.currentStarData = starData;
     console.log(starData);
+    const owner = store
+      .getState()
+      .players.items.find(p => p.id === starData.playerId);
+    const isPlayer = store.getState().players.playerId == starData.playerId;
+    console.log(owner, isPlayer);
     const planetName = this.view.querySelector('.planet-name');
+    const ownerElement = this.view.querySelector('.owner');
     const planetResources = this.view.querySelector('.planet-resources');
-
+    const upgrades = document.querySelector('.upgrades');
     if (planetName) planetName.textContent = starData.name;
+
+    if (ownerElement)
+      ownerElement.textContent = owner ? owner.alias : 'unoccupied';
 
     if (planetResources) {
       let html = '';
@@ -69,11 +94,18 @@ export const StarDetailsView = {
         'Terraformed Resources',
         starData.terraformedResource,
       );
-      html += this.createResourceItem('Ships', '24');
-      html += this.createResourceItem('Shipments per hour', '0.8');
-      html += this.createResourceItem('Economy', '1');
-      html += this.createResourceItem('Industry', '3');
-      html += this.createResourceItem('Science', '0');
+      if (owner) {
+        html += this.createResourceItem('Ships', '24');
+        html += this.createResourceItem('Shipments per hour', '0.8');
+        html += this.createResourceItem('Economy', '1');
+        html += this.createResourceItem('Industry', '3');
+        html += this.createResourceItem('Science', '0');
+      }
+      if (upgrades && isPlayer) {
+        upgrades.classList.remove('hide');
+      } else if (upgrades) {
+        upgrades.classList.add('hide');
+      }
       planetResources.innerHTML = html;
     }
 

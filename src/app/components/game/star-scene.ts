@@ -5,18 +5,58 @@ import { Star } from './component/star';
 import { StarDetailsView } from './component/star-view/star-details-view';
 import { LoadingView } from './component/loading/loading';
 import { ProdCountdown } from './component/prod-countdown/prod-countdown';
+import { store } from 'app';
+import { Unsubscribe } from 'redux-saga';
+import { StarItem } from 'app/redux/reducers/star-reducer';
+import { subscribe } from 'app/event/event-bus';
+import { Events } from 'app/event/events';
+import { updateFleetSelected } from 'app/redux/actions/system-actions';
+import { Waypoints } from './component/waypoint/waypoint';
 export class StarScene extends Phaser.Scene {
   private container: Phaser.GameObjects.Container | undefined = undefined;
   private loadingObject: Phaser.GameObjects.DOMElement | undefined = undefined;
   private containerWidth: number = 0;
   private containerHeight: number = 0;
+  private starsData: StarItem[] = [];
   private stars: any[] = [];
+  private createReady: boolean = false;
+  private firstRender: boolean = false;
+  private storeUnsubscription: Unsubscribe | undefined;
+  private fleetIconHolder: HTMLElement | undefined;
+  private showingFleets: boolean = false;
+  private waypointMode: boolean = false;
   constructor() {
     super({ key: 'stars-view' });
+    this.subscribe();
+  }
+  private subscribe() {
+    subscribe(Events.SHOW_ORBITING_FLEETS, this.showFleets.bind(this));
+
+    this.starsData = store.getState().stars.items;
+
+    this.storeUnsubscription = store.subscribe(() => {
+      const state = store.getState();
+
+      this.waypointMode = !!state.system.selectedFleet;
+      Waypoints.showWayPointsInRange(
+        state.system.selectedFleet,
+        this,
+        this.container,
+      );
+
+      if (state.stars.items.length) {
+        this.starsData = state.stars.items;
+        if (this.createReady && !this.firstRender) {
+          this.firstRender = true;
+          this.create();
+        }
+      }
+    });
   }
   public preload() {
     this.cameras.main.setBackgroundColor('#1d1d1d');
     LoadingView.create(this);
+    this.load.svg('fleet-icon', 'images/fleet-icon-white.svg');
     this.load.image('star', 'star.png');
     this.load.image('unoccupied-star', 'unoccupied-star.png');
     this.load.image('bg1', 'bg2.png');
@@ -30,6 +70,10 @@ export class StarScene extends Phaser.Scene {
     );
   }
   public create() {
+    this.createReady = true;
+    if (!this.starsData.length) return;
+    this.firstRender = true;
+
     LoadingView.destroy();
 
     const rect = {
@@ -84,6 +128,9 @@ export class StarScene extends Phaser.Scene {
         startX = event.touches[0].clientX;
         startY = event.touches[0].clientY;
       }
+      if (this.showingFleets) {
+        this.hideFleets();
+      }
     });
 
     canvas?.addEventListener('touchmove', event => {
@@ -125,12 +172,17 @@ export class StarScene extends Phaser.Scene {
       this.zoomIn();
     });
     this.createUI();
+    this.centerAroundHomeStar();
   }
   private zoomIn() {
     if (!this.container) return;
     let scale = this.container.scale;
     if (scale <= 2) scale += 0.03;
     this.container.setScale(scale, scale);
+    // this.container.setPosition(
+    //   this.container.x * scale,
+    //   this.container.y * scale,
+    // );
   }
 
   private zoomOut() {
@@ -138,6 +190,11 @@ export class StarScene extends Phaser.Scene {
     let scale = this.container.scale;
     if (scale >= 0.5) scale -= 0.03;
     this.container.setScale(scale, scale);
+    console.log(this.container.x, scale, this.container.x / scale);
+    // this.container.setPosition(
+    //   this.container.x / scale,
+    //   this.container.y / scale,
+    // );
   }
 
   private createUI() {
@@ -161,6 +218,88 @@ export class StarScene extends Phaser.Scene {
     `);
     ProdCountdown.create();
     StarDetailsView.create(this);
+    this.createFleetIconHolder();
+  }
+  private createFleetIconHolder() {
+    const rect = {
+      width: Number(this.game.config.width),
+      height: Number(this.game.config.height),
+    };
+    this.fleetIconHolder = document.createElement('div');
+    this.fleetIconHolder.className = 'fleet-icon-container hide';
+    const fleetIconHolderObject = this.add.dom(
+      rect.width - 200,
+      rect.height - 350,
+      this.fleetIconHolder,
+      `pointer-events: none;`,
+    );
+    this.fleetIconHolder.innerHTML = `<div class="fleet-icon-wrapper"><div id="fleet-icon-holder"></div></div>`;
+    this.fleetIconHolder.onmousedown = event => {
+      event.stopPropagation();
+    };
+  }
+  private hideFleets() {
+    if (this.fleetIconHolder) {
+      this.showingFleets = false;
+      this.fleetIconHolder.classList.add('hide');
+    }
+  }
+  private showFleets(info: { starId: number }) {
+    if (this.fleetIconHolder) {
+      const state = store.getState();
+      this.showingFleets = true;
+      this.fleetIconHolder.classList.remove('hide');
+      const holder = this.fleetIconHolder.querySelector('#fleet-icon-holder');
+      if (holder) {
+        holder.innerHTML = '';
+        const star = store
+          .getState()
+          .stars.items.find(s => s.id === info.starId);
+
+        if (star)
+          star.fleetsOrbiting.forEach(fleetId => {
+            const fleet = state.fleets.items.find(f => f.id == fleetId);
+            if (fleet) {
+              holder.innerHTML += `<div class="fleet-button-holder" data-fleet-id="${fleet.id}"><div class="fleet-button"><img src="images/fleet-icon.svg" alt=""></div><span class="fleet-name">${fleet.name}</span></div>`;
+            }
+          });
+        const fleetIconElements = holder.querySelectorAll('[data-fleet-id]');
+        if (fleetIconElements) {
+          Array.prototype.slice
+            .call(fleetIconElements)
+            .forEach(
+              element =>
+                (element.onclick = () =>
+                  this.onFleetIconClicked(
+                    element.getAttribute('data-fleet-id'),
+                  )),
+            );
+        }
+      }
+    }
+  }
+  private onFleetIconClicked(fleetId) {
+    store.dispatch(updateFleetSelected(Number(fleetId)));
+    this.hideFleets();
+  }
+  private centerAroundHomeStar() {
+    const player = store
+      .getState()
+      .players.items.find(p => p.id === store.getState().players.playerId);
+    if (player) {
+      const homeStar = store
+        .getState()
+        .stars.items.find(star => star.id === player.homeId);
+      if (homeStar && this.container) {
+        console.log(homeStar);
+        const gameWidth = Number(this.game.config.width);
+        const gameHeight = Number(this.game.config.height);
+        this.container?.setPosition(
+          Number(gameWidth / 2) - Number(homeStar.x * this.container.scale),
+          Number(gameHeight / 2) - Number(homeStar.y * this.container.scale),
+        );
+      }
+    }
   }
   // private createStars() {
   //   const starList: any[] = [];
@@ -409,15 +548,18 @@ export class StarScene extends Phaser.Scene {
 
   //   return star;
   // }
-
+  private destoryAllStars() {
+    this.stars.forEach(star => star.destroy());
+  }
   private generateStars() {
     if (!this.container) return;
+    this.destoryAllStars();
     const rect = {
       width: Number(this.game.config.width),
       height: Number(this.game.config.height),
     };
-    for (let a = 0; a < data.stars.length; ++a) {
-      const starData = data.stars[a] as any;
+    for (let a = 0; a < this.starsData.length; ++a) {
+      const starData = this.starsData[a] as any;
       if (starData.x > this.containerWidth) this.containerWidth = starData.x;
       if (starData.y > this.containerHeight) this.containerHeight = starData.y;
 
